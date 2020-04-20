@@ -36,8 +36,7 @@ class enterLoginPageTest(unittest.TestCase):
          
         btn = HomePage(self.driver)
           
-        btn.enter_login_page()
-        
+        btn.enter_login_page()     
     
     def test_press_register_btn(self):  
         
@@ -45,9 +44,7 @@ class enterLoginPageTest(unittest.TestCase):
         
         btn = HomePage(self.driver)
         
-        btn.enter_register_page()
-        
-         
+        btn.enter_register_page()  
     
     def tearDown(self):
         time.sleep(2)
@@ -56,33 +53,13 @@ class enterLoginPageTest(unittest.TestCase):
         
 
 if __name__ == '__main__':
-    unittest.main()
+#     unittest.main()
 
-# #     使用TestSuite可以做到有選擇地執行用例，不需要測試的case可以無需加入。TestSuite按照addTest()的先後順序執行，需要先執行的case先新增到TestSuite中。
-#     suite = unittest.TestSuite()
-#     suite.addTest(enterLoginPageTest('test_press_login_btn'))
-#     suite.addTest(enterLoginPageTest('test_press_register_btn'))
-#     #執行測試
-#     runner = unittest.TextTestRunner()
-#     runner.run(suite)
-         
-# driver = Device(
-#             'Android',
-#             '6.0.1',
-#             'phone',
-#             'F5AZFG06J546',
-#             'com.zuvio.student',
-#             'com.zuvio.student.LauncherActivity',
-#             'true',
-#             'true',
-#             'UiAutomator2'
-#         ).connect_to_appium_server()
-#         
-# time.sleep(10)
-# 
-# btn = HomePage(driver)
-# 
-# 
-# btn.enter_login_page()
-#         
+#     使用TestSuite可以做到有選擇地執行用例，不需要測試的case可以無需加入。TestSuite按照addTest()的先後順序執行，需要先執行的case先新增到TestSuite中。
+    suite = unittest.TestSuite()
+    suite.addTest(enterLoginPageTest('test_press_register_btn'))
+    suite.addTest(enterLoginPageTest('test_press_register_btn'))
+    #執行測試
+    runner = unittest.TextTestRunner(verbosity=2)
+    runner.run(suite)         
 
